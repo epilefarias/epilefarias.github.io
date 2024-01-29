@@ -6,6 +6,15 @@ date:
 tags:
 ---
 
+---
+share: true
+title: Oi, meu nome é Felipe :)
+filename: 
+date: 
+tags: 
+---
+
+
 
 Sou pesquisador e engenheiro na parte de Aprendizado de Máquina baseado no Rio de Janeiro. Faço o bolo todo, desde a pesquisa na literatura sobre as melhores arquiteturas e práticas para cada tarefa em que IA pode ser aplicada, treinamento de modelos, obtenção de datasets e até crio datasets se for necessário.
 
