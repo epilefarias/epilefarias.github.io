@@ -1,4 +1,11 @@
-## Oi, meu nome é Felipe :)
+---
+share: true
+title: Felipe Farias
+filename: 
+date: 
+tags:
+---
+
 
 Sou pesquisador e engenheiro na parte de Aprendizado de Máquina baseado no Rio de Janeiro. Faço o bolo todo, desde a pesquisa na literatura sobre as melhores arquiteturas e práticas para cada tarefa em que IA pode ser aplicada, treinamento de modelos, obtenção de datasets e até crio datasets se for necessário.
 
@@ -12,7 +19,7 @@ Sou pesquisador e engenheiro na parte de Aprendizado de Máquina baseado no Rio 
 3. Programas para reconhecer retângulos em imagens.
 
 
-### Principais artigos
+### Principais artigos (mas tem outros ali no meu perfil no [Scholar](https://scholar.google.com/citations?user=Lteubi8AAAAJ&hl=en))
 
 - [Bilingual ASR model with language identification for Brazilian Portuguese and South-American Spanish](https://scholar.google.com/scholar?oi=bibs&cluster=15022580782206326978&btnI=1&hl=en) - SBrT 2023
 

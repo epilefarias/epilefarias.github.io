@@ -1,0 +1,11 @@
+{
+  "obsidian-mkdocs-publisher:publisher-publish-all": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
+    }
+  ]
+}
