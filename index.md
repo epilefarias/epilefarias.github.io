@@ -6,13 +6,6 @@ date:
 tags:
 ---
 
----
-share: true
-title: Oi, meu nome é Felipe :)
-filename: 
-date: 
-tags: 
----
 
 
 
