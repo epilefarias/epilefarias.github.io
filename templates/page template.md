@@ -1,7 +1,7 @@
 ---
 share: false
 title: "Page Name Here"
-date: {{date:YYYYMMDD}}
+date: 
 filename: 
 tags: [obsidian]
 
