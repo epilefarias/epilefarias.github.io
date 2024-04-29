@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oi! Felipe aqui!</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <link rel="icon" href="assets/favicon/faviconlight-16.png" sizes="16x16" id="favicon-16">
+  <link rel="icon" href="assets/favicon/faviconlight-32.png" sizes="32x32" id="favicon-32">
+  <link rel="icon" href="assets/favicon/faviconlight-48.png" sizes="48x48" id="favicon-48">
+
+  <meta property="og:title" content="Hi! My Name is Felipe" />
+  <meta property="og:description" content="Designer at The Browser Company. Previously Apple, WhatsApp, and Facebook." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://charliedeets.com" />
+  <meta property="og:image" content="https://charliedeets.com/assets/about/charlie.jpg" />
+
+  <script defer src="https://us.umami.is/script.js" data-website-id="9f604b15-c1d3-4211-acc9-c266009313a1"></script>
+</head>
+<body>
+  <div id="fadein"></div>
+  <header>
+  </header>
+  <main>
+    <section>Hi! My name is <a class="highlight" href="about/">Felipe</a> and I am a researcher.</section>
+
+    <section>I recently started work at <a class="highlight" href="https://thebrowser.company" target="_blank">Birlasoft <span class="underweight">↗</span></a>, helping to make the internet better.</section>
+
+    <section>I designed at <a class="highlight" href="apple/">Apple</a> for five years, working on Safari, Home, Privacy, Accessibility and Screen Sharing.</section>
+
+    <section>Before that, I worked at <a class="highlight" href="whatsapp/">WhatsApp</a>. One of my favorite features I designed was Swipe to Reply.</section>
+
+    <section>Previously I worked on Groups, Composer and Privacy at <a class="highlight"  href="facebook/">Facebook</a>.</section>
+
+    <section>I built and grew the app <a class="highlight" href="moon/">MOON</a> to nine million users before it was acquired by Alba Studio in 2023.</section>
+
+    <section>By night, I’m building <a class="highlight" href="https://builtfor.space" target="_blank">Mission Control <span class="underweight">↗</span></a>. Simple  software for immersive environments.</section>
+
+
+  </main>
+  <footer></footer>
+  <script type="text/javascript">
+  window.onload = function(){
+    setTimeout(function(){
+      document.getElementById("fadein").remove();
+    },1000);
+  };
+  </script>
+  <script>
+    function changeFavicons(theme) {
+      document.getElementById('favicon-16').href = `assets/favicon/favicon-${theme}-16.png`;
+      document.getElementById('favicon-32').href = `assets/favicon/favicon-${theme}-32.png`;
+      document.getElementById('favicon-48').href = `assets/favicon/favicon-${theme}-48.png`;
+    }
+    const initialTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    changeFavicons(initialTheme);
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+      const newTheme = event.matches ? 'dark' : 'light';
+      changeFavicons(newTheme);
+    });
+  </script>
+</body>
+</html>
