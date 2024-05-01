@@ -2,7 +2,7 @@
 body {
     margin: 0 auto;
     text-align: center;
-    background-color: #DDDEED;
+    background-color: #e8e9ec;
   }
   
   main {
@@ -132,6 +132,13 @@ body {
     border-color: rgb(118, 107, 118);
     fill: white;
     fill-opacity: 100;
+  }
+
+  .lang:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #0E1443;
   }
 
 
