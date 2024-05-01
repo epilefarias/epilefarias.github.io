@@ -12,24 +12,64 @@
   <link rel="icon" href="assets/favicon/faviconlight-48.png" sizes="48x48" id="favicon-48">
 
   <meta property="og:title" content="Hi! My Name is Felipe" />
-  <meta property="og:description" content="Designer at The Browser Company. Previously Apple, WhatsApp, and Facebook." />
+  <meta property="og:description" content="." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://charliedeets.com" />
-  <meta property="og:image" content="https://charliedeets.com/assets/about/charlie.jpg" />
+  <meta property="og:url" content="https://epilefarias.github.io" />
 
   <script defer src="https://us.umami.is/script.js" data-website-id="9f604b15-c1d3-4211-acc9-c266009313a1"></script>
 </head>
 <body>
-  <div id="fadein"></div>
-  <header>
+
+  <header >
+    
   </header>
+
+  <div id="fadein"></div>
+  
   <main>
-    <section>Hi! My name is <a class="highlight" href="about/">Felipe</a> and I am a researcher.</section>
 
-    <section>I recently started work at <a class="highlight" href="https://birlasoft.com.br" target="_blank">Birlasoft <span class="underweight">↗</span></a>, helping businesses use AI in their workflow.</section>
+    <div style="text-align: right;">
+      <section class="language"> <a class="lang" id="pt">PT</a>/<a class="lang" id="en">EN</a></section>
+    </div>
 
+    <div id="en-text">
+
+      <section>Hi! My name is <a class="highlight" href="about/">Felipe</a> and I am a researcher and engineer with deep interest in Machine Learning, Speech Enhancement and Image Processing. I am currently investigating how to use AI to help solve diverse problems.</section>
+
+      <section>I recently started work at <a class="highlight" href="https://www.birlasoft.com/br/" target="_blank">Birlasoft <span class="underweight">↗</span></a>, helping businesses use AI in their workflow.</section>
+    
+      <section>Previously, I've worked remotely in  </section>
+    </div>
+
+    <div id="pt-text" style="display:none">
+      
+      <section>Oi! Meu nome é Felipe, pesquisador e engenheiro brasileiro com mais de 10 anos de experiência em processamento de sinais de fala e processamento digital de imagens. Meus interesses me levaram a minha obssessão atual: como IA pode ajudar em problemas em diversas áreas.</section>
+
+      <section>Recentemente comecei a trabalhar na <a class="highlight" href="https://www.birlasoft.com/br/" target="_blank">Birlasoft</a>, ajudando negócios de todos os tamanhos a integrar IA no seu trabalho, seja construindo modelos de IA do zero, seja integrando as soluções de grandes provedores como Azure e IBM Watsonx.</section>
+
+      <section>Antes, fui responsável pela área de Reconhecimento Automático de Fala na Alana AI, capitaneando os modelos proprietários de ASR em Português e em Espanhol da empresa.</section>
+
+      <section>Antes disso, desenvolvi minha tese de doutorado no LASP, do Insituto Militar de Engenharia, criando uma técnica de realce de sinais de voz que funciona inteiramente no domínio do tempo (não precisa de transformação com FFT, MFCC ou correlatos!)</section>
+      
+    </div>
   </main>
   <footer></footer>
+  <script type="text/javascript">
+    const pt = document.getElementById('pt')
+    const en = document.getElementById('en')
+    const portuguese_text = document.getElementById('pt-text')
+    const english_text = document.getElementById('en-text')
+
+    pt.addEventListener('click',function(event) {
+      portuguese_text.style.display = 'block';
+      english_text.style.display = 'none';
+    });
+    en.addEventListener('click',function(event) {
+      portuguese_text.style.display = 'none';
+      english_text.style.display = 'block';
+    });
+  </script>
+
   <script type="text/javascript">
   window.onload = function(){
     setTimeout(function(){
