@@ -1,218 +1,224 @@
 
 body {
-    margin: 0 auto;
-    text-align: center;
-    background-color: #e8e9ec;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #eee;
+}
+
+main {
+  margin: 120px auto;
+  text-align: center;
+  font-family:  'Courier', Courier, monospace, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-style: inherit;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 37px;
+  color: #000633;
+}
+
+main section, main ul, main h1, main h2, main h3, main h4, hr {
+  max-width: 1000px;/**/
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+main h3, h4 {
+  margin-top: 0;
+}
+
+main section {
+  margin-bottom: 37px;
+}
+
+main section .highlight {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main section .highlight, main h1, main h2, main h3, main h4 {
+  color: #8990C3;
+}
+
+main section .highlight:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 4px;
+  text-decoration-color: #525A98;
+  text-decoration-skip-ink: none;
+}
+
+a span.underweight {
+  font-size: 17pt;
+}
+
+main ul li {
+  font-size: 20px;
+  line-height: 34px;
+  color: #29316E;
+}
+
+main ul li a {
+  text-decoration: none;
+  color: #29316E;
+}
+
+main ul li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #0E1443;
+}
+
+main img, main video {
+  margin: 12px auto 37px;
+  width: 94%;
+  max-width: 780px;
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+main img.is-visible, main video.is-visible {
+  opacity: 1;
+}
+
+main img.inset {
+  max-width: 560px;
+}
+
+main hr {
+  margin-top: 37px;
+  margin-bottom: 37px;
+  opacity: 0.2;
+}
+
+.dark {
+  display: none;
+}
+.light {
+  display: block;
+}
+
+.hoverred:hover {
+  color: red; /* Hover color */
+}
+
+.clickblue {
+  color: #000633;
+}
+
+.clickblue.clicked {
+  color: blue; 
+}
+
+.content {
+  display: none; /* Initially hide all divs */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+}
+
+.items-list {
+  border: 2px dashed rgb(118, 107, 118);
+  background-color: pink;
+  cursor: pointer;
+}
+
+#drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  width: 480px;
+  font-family: sans-serif;
+  margin: 100px auto;
+  padding: 20px;
+  fill:none
+}
+#drop-area.highlight {
+  border-color: rgb(118, 107, 118);
+  fill: white;
+  fill-opacity: 100;
+}
+
+.lang:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #0E1443;
+  cursor: pointer;
+}
+
+@keyframes fadeinall {
+0% {
+  opacity: 1; }
+97% {
+  opacity: 0; }
+98% {
+  opacity: 0;
+  -webkit-transform: translateY(0);
+  transform: translateY(0); }
+100% {
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  z-index: -1; } }
+#fadein {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  background-color: #FAFAFA;
+  z-index: 999;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation: fadeinall 1s normal both;
+  animation: fadeinall 1s normal both;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s; }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #171717;
   }
-  
   main {
-    margin: 120px auto;
-    text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 37px;
-    color: #000633;
+    color: #A1A1A1;
   }
-  
-  main section, main ul, main h1, main h2, main h3, main h4, hr {
-    max-width: 560px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-  }
-  
-  main h3, h4 {
-    margin-top: 0;
-  }
-  
-  main section {
-    margin-bottom: 37px;
-  }
-  
-  main section .highlight {
-    font-weight: 600;
-    text-decoration: none;
-  }
-  
   main section .highlight, main h1, main h2, main h3, main h4 {
-    color: #8990C3;
+    color: #DFDFDF;
   }
-  
-  main section .highlight:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 4px;
-    text-decoration-color: #525A98;
-    text-decoration-skip-ink: none;
-  }
-  
-  a span.underweight {
-    font-size: 17pt;
-  }
-  
-  main ul li {
-    font-size: 20px;
-    line-height: 34px;
-    color: #29316E;
-  }
-  
   main ul li a {
-    text-decoration: none;
-    color: #29316E;
+    color: #DFDFDF;
   }
-  
-  main ul li a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 3px;
-    text-decoration-color: #0E1443;
+  #fadein {
+    background-color: #171717;
   }
-  
-  main img, main video {
-    margin: 12px auto 37px;
-    width: 94%;
-    max-width: 780px;
-    border-radius: 16px;
-    opacity: 0;
-    transition: opacity 1s ease-out;
-  }
-  
-  main img.is-visible, main video.is-visible {
-    opacity: 1;
-  }
-  
-  main img.inset {
-    max-width: 560px;
-  }
-  
-  main hr {
-    margin-top: 37px;
-    margin-bottom: 37px;
-    opacity: 0.2;
-  }
-  
   .dark {
-    display: none;
-  }
-  .light {
     display: block;
   }
-
-  .hoverred:hover {
-    color: red; /* Hover color */
+  .light {
+    display: none;
   }
-
-  .clickblue {
-    color: #000633;
+  main ul li a:hover, main section .highlight:hover {
+    text-decoration-color: #444;
   }
-  
-  .clickblue.clicked {
-    color: blue; 
-  }
+}
 
-  .content {
-    display: none; /* Initially hide all divs */
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #eee;
+@media screen and (max-width: 620px) {
+  main {
+    margin: 24px 24px 64px 24px;
   }
-
-  #drop-area {
-    border: 2px dashed #ccc;
-    border-radius: 20px;
-    width: 480px;
-    font-family: sans-serif;
-    margin: 100px auto;
-    padding: 20px;
-    fill:none
-  }
-  #drop-area.highlight {
-    border-color: rgb(118, 107, 118);
-    fill: white;
-    fill-opacity: 100;
-  }
-
-  .lang:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 3px;
-    text-decoration-color: #0E1443;
-  }
-
-
-  @keyframes fadeinall {
-  0% {
-    opacity: 1; }
-  97% {
-    opacity: 0; }
-  98% {
-    opacity: 0;
-    -webkit-transform: translateY(0);
-    transform: translateY(0); }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-    z-index: -1; } }
-  #fadein {
-    opacity: 1;
-    position: fixed;
-    top: 0;
-    left: 0;
+  main img, main video {
     width: 100%;
-    height: 100%;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-    background-color: #FAFAFA;
-    z-index: 999;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation: fadeinall 1s normal both;
-    animation: fadeinall 1s normal both;
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s; }
-  
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-color: #171717;
-    }
-    main {
-      color: #A1A1A1;
-    }
-    main section .highlight, main h1, main h2, main h3, main h4 {
-      color: #DFDFDF;
-    }
-    main ul li a {
-      color: #DFDFDF;
-    }
-    #fadein {
-      background-color: #171717;
-    }
-    .dark {
-      display: block;
-    }
-    .light {
-      display: none;
-    }
-    main ul li a:hover, main section .highlight:hover {
-      text-decoration-color: #444;
-    }
+    margin: 12px auto 37px;
   }
-  
-  @media screen and (max-width: 620px) {
-    main {
-      margin: 24px 24px 64px 24px;
-    }
-    main img, main video {
-      width: 100%;
-      margin: 12px auto 37px;
-    }
-    main section .highlight:hover {
-      text-decoration: none;
-      text-underline-offset: 0px;
-      text-decoration-thickness: 0px;
-    }
+  main section .highlight:hover {
+    text-decoration: none;
+    text-underline-offset: 0px;
+    text-decoration-thickness: 0px;
   }
+}
