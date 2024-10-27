@@ -61,11 +61,13 @@
   </main>
   <footer></footer>
   <script type="text/javascript">
+    //function to control the change of language in the browser
     const pt = document.getElementById('pt')
     const en = document.getElementById('en')
     const portuguese_text = document.getElementById('pt-text')
     const english_text = document.getElementById('en-text')
 
+    //listeners of the 'portuguese/english' buttons
     pt.addEventListener('click',function(event) {
       portuguese_text.style.display = 'block';
       english_text.style.display = 'none';
@@ -81,6 +83,14 @@
     setTimeout(function(){
       document.getElementById("fadein").remove();
     },1000);
+
+    //function to check navigator language and change text to Portuguese if detected language is Portuguese
+    var language = navigator.language;
+    console.log(`detected language: ${language}`);
+    if (language.startsWith('pt')) {
+        portuguese_text.style.display = 'block';
+        english_text.style.display = 'none';
+      }
   };
   </script>
   <script>
