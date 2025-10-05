@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oi! Felipe aqui!</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <link rel="icon" href="assets/favicon/faviconlight-16.png" sizes="16x16" id="favicon-16">
+  <link rel="icon" href="assets/favicon/faviconlight-32.png" sizes="32x32" id="favicon-32">
+  <link rel="icon" href="assets/favicon/faviconlight-48.png" sizes="48x48" id="favicon-48">
+
+  <meta property="og:title" content="Hi! My Name is Felipe" />
+  <meta property="og:description" content="." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://epilefarias.github.io" />
+
+  <script defer src="https://us.umami.is/script.js" data-website-id="9f604b15-c1d3-4211-acc9-c266009313a1"></script>
+</head>
+<body>
+
+  <header ></header>
+
+  <div id="fadein"></div>
+  
+  <main>
+
+    <div class="header" style="display: flex; justify-content: space-between; align-items: center;">
+      <div class="language">
+        <a class="lang" id="pt">Português</a> / <a class="lang" id="en">English</a>
+      </div>
+      <a href="./index.html">Main page</a>
+    </div>
+
+    <br>
+
+    <div id="en-text">
+
+      <section>Hi!<br><br>My name is Felipe and I am a 🇧🇷 engineer/researcher with more than 10 years of experience in AI, speech signal processing and digital image processing. <br><br> Among my latest obssesions, I can list:</section>
+
+      <section>&bull; <b>Applications of AI in audio</b>, such as Automatic Speech Recognition, Speaker Identification and Diarization (<a class="highlight" href="https://github.com/epilefarias/tiny_speaker_recognition_keras3">here</a> you can find a tiny speaker recognition model (less than 10MB) that achieves >95% accuracy in a dataset with 100 different people). </section>
+
+      <section>&bull; <b>Speech enhancement</b> and improvement of quality and intelligibility (including here you can find <a class="highlight" href="https://github.com/epilefarias/bam">BAM</a>, the speech enhancement technique I developed during my Ph.D. studies, the <a class="highlight" href="https://ieeexplore.ieee.org/abstract/document/9446642/">journal paper</a> I published about it, in case you want to know how I did it, and my <a class="highlight" href="https://lasp.ime.eb.br/docs/thesis/tese_felipe_2021.pdf">thesis</a> in case you want the extended version).</section>
+
+      <section>&bull; Development of <b>web applications</b> (I'm still starting here, but I wrote this website you see. Look at the <a class="highlight" href="https://github.com/epilefarias/epilefarias.github.io">source code</a>).</section>
+
+      <section>You may check out my <a class="highlight" href="https://github.com/epilefarias/">Github</a> to see what I work on in my free time, my <a class="highlight" href="https://scholar.google.com/citations?user=Lteubi8AAAAJ&hl=en">Google Scholar</a> with my publications and my <a class="highlight" href="https://open.spotify.com/intl-pt/artist/4v7cxlxEt3DL53VOcjuCcF?si=Avc-hbVPT0aYzuOgWnxcLw">Spotify</a> with the music I make when I'm not at the computer :)</section>
+    </div>
+
+    <div id="pt-text" style="display:none">
+
+        <a class="blogentry" href="./blog/251005-perspectiva.html">Perspectiva</a>
+    </div>
+  </main>
+  <footer></footer>
+  <script type="text/javascript">
+    //function to control the change of language in the browser
+    const pt = document.getElementById('pt')
+    const en = document.getElementById('en')
+    const portuguese_text = document.getElementById('pt-text')
+    const english_text = document.getElementById('en-text')
+
+    //listeners of the 'portuguese/english' buttons
+    pt.addEventListener('click',function(event) {
+      portuguese_text.style.display = 'block';
+      english_text.style.display = 'none';
+    });
+    en.addEventListener('click',function(event) {
+      portuguese_text.style.display = 'none';
+      english_text.style.display = 'block';
+    });
+  </script>
+
+  <script type="text/javascript">
+  window.onload = function(){
+    setTimeout(function(){
+      document.getElementById("fadein").remove();
+    },1000);
+
+    //function to check navigator language and change text to Portuguese if detected language is Portuguese
+    var language = navigator.language;
+    console.log(`detected language: ${language}`);
+    if (language.startsWith('pt')) {
+        portuguese_text.style.display = 'block';
+        english_text.style.display = 'none';
+      }
+  };
+  </script>
+  <script>
+    function changeFavicons(theme) {
+      document.getElementById('favicon-16').href = `assets/favicon/favicon-${theme}-16.png`;
+      document.getElementById('favicon-32').href = `assets/favicon/favicon-${theme}-32.png`;
+      document.getElementById('favicon-48').href = `assets/favicon/favicon-${theme}-48.png`;
+    }
+    const initialTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    changeFavicons(initialTheme);
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+      const newTheme = event.matches ? 'dark' : 'light';
+      changeFavicons(newTheme);
+    });
+  </script>
+</body>
+</html>

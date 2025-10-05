@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oi! Felipe aqui!</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="../style.css" />
+
+  <link rel="icon" href="assets/favicon/faviconlight-16.png" sizes="16x16" id="favicon-16">
+  <link rel="icon" href="assets/favicon/faviconlight-32.png" sizes="32x32" id="favicon-32">
+  <link rel="icon" href="assets/favicon/faviconlight-48.png" sizes="48x48" id="favicon-48">
+
+  <meta property="og:title" content="Hi! My Name is Felipe" />
+  <meta property="og:description" content="." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://epilefarias.github.io" />
+
+  <script defer src="https://us.umami.is/script.js" data-website-id="9f604b15-c1d3-4211-acc9-c266009313a1"></script>
+</head>
+
+<body>
+
+  <header >
+    <a href="../blog.html">Voltar ao Blog</a>
+    <a href="../index.html">Página Inicial</a>
+  </header>
+
+  <div id="fadein"></div>
+  
+  <main class="blogtext">
+
+    <br>
+
+    <h1>perspectiva</h1>
+
+    <p>eu não gosto de escrever em detalhes.</p>
+
+    <p>eu intencionalmente deixo muitos dos meus desenhos em formato de rascunho. por um bom tempo eu enxerguei isso como meu estilo. sempre desenhava a lápis. eu gosto de como fica o sombreado em lápis/grafite. não sou particularmente bom com borracha mas desde adolescente esse é o jeito que mais me sinto à vontade desenhando. já finalizei com caneta nanquim, caneta bic, mas o jeito que eu sempre gostava mais era a lápis. talvez o aspecto de 'rascunho' me dê alguma paz de espírito. não tá finalizado.</p>
+    <p>foi em 2018, quando comprei um caderninho de desenho, que eu comecei a finalizar meus desenhos à caneta. nessa época, eu estava deprimido, sem celular e sem dinheiro (inclusive foi meio irresponsável comprar o caderno e a caneta). então por motivos alheios à minha vontade eu não tinha condição de dividi-los com mais ninguém. eles eram pra mim. precisavam ser simples, dentro da minha capacidade atual. eles eram pra matar o tempo fazendo algo que eu gostava. o resultado são desenhos imensamente diferentes do que eu considerava meu estilo, em geral com um urso sendo o personagem principal. eram simples, pra caber numa paginazinha, todos finalizados com caneta. nessa, descobri que gosto de fazer texturas repetitivas. é terapêutico.</p>
+      
+    <p>eu acho que a falta de obrigação de postar me ajudou a finalizar desenhos. destravou algo em mim, do mesmo jeito que a ideia de rascunho ajudou a destravar algo em mim anteriormente. as circunstâncias diferentes me forçaram a fazer a mesma coisa que eu gosto de formas extremamente diferentes.</p>
+    
+    <p>e isso é o que tá na minha cabeça agora: tudo tem limite, mas eu posso navegar dentro dos limites de um jeito que <b>nunca os desafie</b> ou eu posso navegar dentro deles de forma a <b>expandi-los</b>. um jeito de mudar isso é mudar as circunstâncias. a <b>perspectiva</b>.</p>
+      
+    </div>
+  </main>
+
+  <footer></footer>
+
+  <script type="text/javascript">
+  window.onload = function(){
+    setTimeout(function(){
+      document.getElementById("fadein").remove();
+    },1000);
+    };
+
+  </script>
+  <script>
+    function changeFavicons(theme) {
+      document.getElementById('favicon-16').href = `assets/favicon/favicon-${theme}-16.png`;
+      document.getElementById('favicon-32').href = `assets/favicon/favicon-${theme}-32.png`;
+      document.getElementById('favicon-48').href = `assets/favicon/favicon-${theme}-48.png`;
+    }
+    const initialTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    changeFavicons(initialTheme);
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+      const newTheme = event.matches ? 'dark' : 'light';
+      changeFavicons(newTheme);
+    });
+  </script>
+</body>
+</html>
